@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeastsOfTheVoid", "BeastsOfTheVoid\BeastsOfTheVoid.csproj", "{7E38A1D2-A5C0-461A-A852-478387939BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "GameLogic\GameLogic.csproj", "{85B00B6F-9550-46A0-BB9B-F6C69787EB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRepository", "GameRepository\GameRepository.csproj", "{49AA06E1-C8F0-41FC-8F60-2E6FDB08AF78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameModel", "GameModel\GameModel.csproj", "{FD6AEAD7-8FC0-4458-A973-08855434EF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRenderer", "GameRenderer\GameRenderer.csproj", "{DF401169-F83D-4523-AD08-22CB38156CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogicTests", "GameLogicTests\GameLogicTests.csproj", "{71262B64-D077-4F88-9F8D-EFECFCC7DCB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E38A1D2-A5C0-461A-A852-478387939BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E38A1D2-A5C0-461A-A852-478387939BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E38A1D2-A5C0-461A-A852-478387939BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E38A1D2-A5C0-461A-A852-478387939BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B00B6F-9550-46A0-BB9B-F6C69787EB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B00B6F-9550-46A0-BB9B-F6C69787EB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B00B6F-9550-46A0-BB9B-F6C69787EB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B00B6F-9550-46A0-BB9B-F6C69787EB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49AA06E1-C8F0-41FC-8F60-2E6FDB08AF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49AA06E1-C8F0-41FC-8F60-2E6FDB08AF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49AA06E1-C8F0-41FC-8F60-2E6FDB08AF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49AA06E1-C8F0-41FC-8F60-2E6FDB08AF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6AEAD7-8FC0-4458-A973-08855434EF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6AEAD7-8FC0-4458-A973-08855434EF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6AEAD7-8FC0-4458-A973-08855434EF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6AEAD7-8FC0-4458-A973-08855434EF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF401169-F83D-4523-AD08-22CB38156CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF401169-F83D-4523-AD08-22CB38156CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF401169-F83D-4523-AD08-22CB38156CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF401169-F83D-4523-AD08-22CB38156CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71262B64-D077-4F88-9F8D-EFECFCC7DCB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71262B64-D077-4F88-9F8D-EFECFCC7DCB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71262B64-D077-4F88-9F8D-EFECFCC7DCB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71262B64-D077-4F88-9F8D-EFECFCC7DCB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42627EE0-D752-4D82-B0AB-AED5203F45FF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameLogic</name>
+    </assembly>
+    <members>
+        <member name="T:GameLogic.FileLogic">
+            <summary>
+            Implements IFileLogic interface.
+            </summary>
+        </member>
+        <member name="M:GameLogic.FileLogic.#ctor(GameModel.IGameModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameLogic.FileLogic"/> class.
+            </summary>
+            <param name="model">IGamemodel implementation.</param>
+        </member>
+        <member name="P:GameLogic.FileLogic.Model">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.FileLogic.LoadGame(System.String,GameModel.IGameModel)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.FileLogic.SaveGame(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GameLogic.IFileLogic">
+            <summary>
+            Specifies the File logic behaviour.
+            </summary>
+        </member>
+        <member name="P:GameLogic.IFileLogic.Model">
+            <summary>
+            Gets or Sets the Game model.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IFileLogic.SaveGame(System.String)">
+            <summary>
+            Saves the current state of the game.
+            </summary>
+            <param name="saveName">The name of the save.</param>
+        </member>
+        <member name="M:GameLogic.IFileLogic.LoadGame(System.String,GameModel.IGameModel)">
+            <summary>
+            Loads the game from a file.
+            </summary>
+            <param name="fname">The name of the saved game.</param>
+            <param name="model">IGameModel implementation, which stores the data of the file.</param>
+        </member>
+        <member name="T:GameLogic.IGameLogic">
+            <summary>
+            Specifies the Game logic behaviour.
+            </summary>
+        </member>
+        <member name="P:GameLogic.IGameLogic.GameOver">
+            <summary>
+            Gets or sets a value indicating whether the game is ended or not.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IGameLogic.MoveShip(System.Double,System.Double)">
+            <summary>
+            Moves the player's ship.
+            </summary>
+            <param name="xInc">The X velocity of the player's ship.</param>
+            <param name="yInc">The Y velocity of the player's ship.</param>
+        </member>
+        <member name="M:GameLogic.IGameLogic.OneTick(System.Windows.Threading.DispatcherTimer)">
+            <summary>
+            Specifies the behavior of the game in each time period.
+            </summary>
+            <param name="timerAn">DispatcherTimer used for display animation.</param>
+        </member>
+        <member name="M:GameLogic.IGameLogic.NextLevel">
+            <summary>
+            Loads the next level of the game.
+            </summary>
+            <returns>Return a new GameModel with the next level.</returns>
+        </member>
+        <member name="M:GameLogic.IGameLogic.SetDegree(System.Double,System.Double)">
+            <summary>
+            Sets the ratation degree of the player's ship.
+            </summary>
+            <param name="x">The X axis of the mouse position.</param>
+            <param name="y">The Y axis of the mouse position.</param>
+        </member>
+        <member name="T:GameLogic.IShootLogic">
+            <summary>
+            Specifies the Shoot logic behaviour.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IShootLogic.Shoot">
+            <summary>
+            Adds a bullet to the player's bullet list.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IShootLogic.BulletTick(GameModel.BulletItem)">
+            <summary>
+            Moves a specified bullet.
+            </summary>
+            <param name="bullet">The bullet which will be moved.</param>
+        </member>
+        <member name="M:GameLogic.IShootLogic.ShootTick(System.Windows.Threading.DispatcherTimer,System.Windows.Threading.DispatcherTimer)">
+            <summary>
+            Checks all the player's bullets for collision, and takes the neccessary steps, if one bullet is collided with other objects.
+            </summary>
+            <param name="timerAn">The timer, which used for display explosion.</param>
+            <param name="sht">The timer, which used for the player's shoot method. </param>
+        </member>
+        <member name="M:GameLogic.IShootLogic.EnemyShoot(GameModel.SpaceShipItem)">
+            <summary>
+            Adds a bullet to the specified enemy's bullet list.
+            </summary>
+            <param name="enemy">The enemy, which is shooting.</param>
+        </member>
+        <member name="M:GameLogic.IShootLogic.EnemyShootTick">
+            <summary>
+            Checks all the enemy's bullets for collision, and takes the neccessary steps, if one bullet is collided with other objects.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IShootLogic.SpaceShipTick">
+            <summary>
+            Adds all enemy's bullets to the EnemyBullets list.
+            </summary>
+        </member>
+        <member name="M:GameLogic.IShootLogic.ShootOnetick">
+            <summary>
+            Handles all enemy's shooting.
+            </summary>
+        </member>
+        <member name="T:GameLogic.LogicFactory">
+            <summary>
+            Creates logic instances.
+            </summary>
+        </member>
+        <member name="M:GameLogic.LogicFactory.CreateFileLogic(GameModel.IGameModel)">
+            <summary>
+            Creates a FileLogic.
+            </summary>
+            <param name="model">IGamemodel implementation.</param>
+            <returns>Returns a FileLogic.</returns>
+        </member>
+        <member name="M:GameLogic.LogicFactory.CreateShootLogic(GameModel.IGameModel)">
+            <summary>
+            Creates a ShootLogic.
+            </summary>
+            <param name="model">IGamemodel implementation.</param>
+            <returns>Returns a ShootLogic.</returns>
+        </member>
+        <member name="M:GameLogic.LogicFactory.CreateMainLogic(GameModel.IGameModel)">
+            <summary>
+            Creates a MainLogic.
+            </summary>
+            <param name="model">IGamemodel implementation.</param>
+            <returns>Returns a MainLogic.</returns>
+        </member>
+        <member name="T:GameLogic.MainLogic">
+            <summary>
+            Implements IGameLogic interface.
+            </summary>
+        </member>
+        <member name="M:GameLogic.MainLogic.#ctor(GameModel.IGameModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameLogic.MainLogic"/> class.
+            </summary>
+            <param name="model">IGameModel implementation.</param>
+        </member>
+        <member name="P:GameLogic.MainLogic.GameOver">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.MainLogic.MoveShip(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.MainLogic.NextLevel">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.MainLogic.SetDegree(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.MainLogic.OneTick(System.Windows.Threading.DispatcherTimer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GameLogic.ShootLogic">
+            <summary>
+            Implements IShootLogic interface.
+            </summary>
+        </member>
+        <member name="M:GameLogic.ShootLogic.#ctor(GameModel.IGameModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameLogic.ShootLogic"/> class.
+            </summary>
+            <param name="model">IGameModel implementation.</param>
+        </member>
+        <member name="M:GameLogic.ShootLogic.BulletTick(GameModel.BulletItem)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.Shoot">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.ShootTick(System.Windows.Threading.DispatcherTimer,System.Windows.Threading.DispatcherTimer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.EnemyShoot(GameModel.SpaceShipItem)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.EnemyShootTick">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.SpaceShipTick">
+            <inheritdoc/>
+        </member>
+        <member name="M:GameLogic.ShootLogic.ShootOnetick">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

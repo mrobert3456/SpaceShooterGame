@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>GameRenderer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\backgroundmeteors.png" />
+    <None Remove="Images\doublepoints.png" />
+    <None Remove="Images\instakill.png" />
+    <None Remove="Images\meteor.png" />
+    <None Remove="Images\Nebula.png" />
+    <None Remove="Images\prog_normandy_outline.png" />
+    <None Remove="Images\starman_easter_egg.png" />
+    <None Remove="Images\station2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\backgroundmeteors.png" />
+    <EmbeddedResource Include="Images\doublepoints.png" />
+    <EmbeddedResource Include="Images\instakill.png" />
+    <EmbeddedResource Include="Images\meteor.png" />
+    <EmbeddedResource Include="Images\Nebula.png" />
+    <EmbeddedResource Include="Images\prog_normandy_outline.png" />
+    <EmbeddedResource Include="Images\starman_easter_egg.png" />
+    <EmbeddedResource Include="Images\station2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameModel\GameModel.csproj" />
+  </ItemGroup>
+
+</Project>

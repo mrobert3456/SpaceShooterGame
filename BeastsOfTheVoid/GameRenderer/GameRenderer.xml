@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameRenderer</name>
+    </assembly>
+    <members>
+        <member name="T:GameRenderer.Renderer">
+            <summary>
+            This will render the game objects on the screen.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.Renderer.#ctor(GameModel.IGameModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameRenderer.Renderer"/> class.
+            </summary>
+            <param name="model">The model which is needed to make the renderer.</param>
+        </member>
+        <member name="M:GameRenderer.Renderer.BuildDrawing(GameRenderer.SpriteAnimation)">
+            <summary>
+            This will collect everything for the game to be rendered.
+            </summary>
+            <param name="sa">SpriteAnimation object that is used for animation.</param>
+            <returns>The collection of drawings that will be rendered.</returns>
+        </member>
+        <member name="M:GameRenderer.Renderer.BuildAnimation(GameRenderer.SpriteAnimation)">
+            <summary>
+            Gets the current frame.
+            </summary>
+            <param name="animation">The animation class, which handles the animations.</param>
+            <returns>Returns the current frame.</returns>
+        </member>
+        <member name="M:GameRenderer.Renderer.DrawText(System.Windows.Media.DrawingContext)">
+            <summary>
+            Writes the point and the kill count of the player on the screen.
+            </summary>
+            <param name="ctx">The drawign context that will be used to display the text.</param>
+        </member>
+        <member name="M:GameRenderer.Renderer.DrawBonusTime(System.Windows.Media.DrawingContext)">
+            <summary>
+            Displays how much time the player has before his perk is removed.
+            </summary>
+            <param name="ctx">The drawign context that will be used to display the text.</param>
+        </member>
+        <member name="M:GameRenderer.Renderer.GetBrush(System.String)">
+            <summary>
+            Creates the required image if its not already created.
+            </summary>
+            <param name="fname">The name of the image that we want to load into the game.</param>
+            <returns>An ImageBrush that can be used for representing images.</returns>
+        </member>
+        <member name="T:GameRenderer.RenderFactory">
+            <summary>
+            Creates render instances.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.RenderFactory.CreateRender(GameModel.IGameModel)">
+            <summary>
+            Creates a Renderer.
+            </summary>
+            <param name="model">IGameModel implementation.</param>
+            <returns>Returns a Renderer.</returns>
+        </member>
+        <member name="M:GameRenderer.RenderFactory.CreateAnimation(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Creates a SpriteAnimation.
+            </summary>
+            <param name="frames">Number of frames in the animation.</param>
+            <param name="frameWidth">Width of each frame in pixels.</param>
+            <param name="frameHeight">Height of each frame in pixels.</param>
+            <param name="directoryName">The directory, which contains all the frame picture.</param>
+            <returns>Returns a SpriteAnimation.</returns>
+        </member>
+        <member name="T:GameRenderer.SpriteAnimation">
+            <summary>
+            Handles any animation.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.SpriteAnimation.#ctor(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameRenderer.SpriteAnimation"/> class.
+            </summary>
+            <param name="frames">Number of frames in the animation.</param>
+            <param name="frameWidth">Width of each frame in pixels.</param>
+            <param name="frameHeight">Height of each frame in pixels.</param>
+            <param name="directoryName">The directory, which contains all the frame picture.</param>
+        </member>
+        <member name="P:GameRenderer.SpriteAnimation.Brush">
+            <summary>
+            Gets the current frame.
+            </summary>
+        </member>
+        <member name="P:GameRenderer.SpriteAnimation.Timer">
+            <summary>
+            Gets the Timer.
+            </summary>
+        </member>
+        <member name="P:GameRenderer.SpriteAnimation.Frames">
+            <summary>
+            Gets the frames list.
+            </summary>
+        </member>
+        <member name="P:GameRenderer.SpriteAnimation.FrameDuration">
+            <summary>
+            Gets or Sets the each frame's duration.
+            </summary>
+        </member>
+        <member name="P:GameRenderer.SpriteAnimation.AnimIndex">
+            <summary>
+            Gets or Sets the index of the current frame.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.SpriteAnimation.SetFrame(System.Int32)">
+            <summary>
+            Manually set the frame index. This will not stop the running animation nor change the animation index.
+            </summary>
+            <param name="index">Frame index.</param>
+        </member>
+        <member name="M:GameRenderer.SpriteAnimation.StartAnimation">
+            <summary>
+            Start sprite animation.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.SpriteAnimation.NextFrame">
+            <summary>
+            Increase animation index by one or reset to zero if at end of list.
+            </summary>
+        </member>
+        <member name="M:GameRenderer.SpriteAnimation.GetFrames(System.String)">
+            <summary>
+            Gets the frames from the specified directory.
+            </summary>
+            <param name="directoryName">Directory name.</param>
+            <returns>Returns a ImageSource list of frames.</returns>
+        </member>
+    </members>
+</doc>

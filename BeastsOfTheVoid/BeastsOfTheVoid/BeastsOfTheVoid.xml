@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BeastsOfTheVoid</name>
+    </assembly>
+    <members>
+        <member name="T:BeastsOfTheVoid.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:BeastsOfTheVoid.GameControl">
+            <summary>
+            This will control how the game works.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.GameControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.GameControl"/> class.
+            </summary>
+        </member>
+        <member name="P:BeastsOfTheVoid.GameControl.SaveName">
+            <summary>
+            Gets or Sets how the save of the game should be named.
+            </summary>
+        </member>
+        <member name="P:BeastsOfTheVoid.GameControl.Level">
+            <summary>
+            Gets or Sets what level the game should render.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.GameControl.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            Renders the game.
+            </summary>
+            <param name="drawingContext">A drawing context that will be rendering the game.</param>
+        </member>
+        <member name="T:BeastsOfTheVoid.MainMenu">
+            <summary>
+            Interaction logic for MainMenu.xaml.
+            </summary>
+            <summary>
+            MainMenu
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.MainMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.MainMenu"/> class.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.MainMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BeastsOfTheVoid.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BeastsOfTheVoid.PauseMenu">
+            <summary>
+            Interaction logic for PauseMenu.xaml.
+            </summary>
+            <summary>
+            PauseMenu
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.PauseMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.PauseMenu"/> class.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.PauseMenu.#ctor(System.Windows.Window,GameLogic.IFileLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.PauseMenu"/> class.
+            </summary>
+            <param name="win">The window, that called the Pause Menu.</param>
+            <param name="logic">IFileLogic implementation.</param>
+        </member>
+        <member name="M:BeastsOfTheVoid.PauseMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BeastsOfTheVoid.SaveGameMenu">
+            <summary>
+            Interaction logic for SaveGameMenu.xaml.
+            </summary>
+            <summary>
+            SaveGameMenu
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.SaveGameMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.SaveGameMenu"/> class.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.SaveGameMenu.#ctor(GameLogic.IFileLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BeastsOfTheVoid.SaveGameMenu"/> class.
+            </summary>
+            <param name="logic">IFileLogic implementation.</param>
+        </member>
+        <member name="M:BeastsOfTheVoid.SaveGameMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BeastsOfTheVoid.WindowFactory">
+            <summary>
+            Creates Windows.
+            </summary>
+        </member>
+        <member name="M:BeastsOfTheVoid.WindowFactory.CreateMainMenu">
+            <summary>
+            Creates a Main menu.
+            </summary>
+            <returns>Returns a MainMenu.</returns>
+        </member>
+        <member name="M:BeastsOfTheVoid.WindowFactory.CreatePauseMenu(System.Windows.Window,GameLogic.IFileLogic)">
+            <summary>
+            Creates a Pause menu.
+            </summary>
+            <param name="win">The window, that called the Pause Menu.</param>
+            <param name="logic">IFileLogic implementation.</param>
+            <returns>Returns a PauseMenu.</returns>
+        </member>
+        <member name="M:BeastsOfTheVoid.WindowFactory.CreateMainWindow">
+            <summary>
+            Crates a Main window.
+            </summary>
+            <returns>Returns a MainWindow.</returns>
+        </member>
+        <member name="M:BeastsOfTheVoid.WindowFactory.CreateSaveGameMenu(GameLogic.IFileLogic)">
+            <summary>
+            Creates a SaveGame menu.
+            </summary>
+            <param name="logic">IFileLogic implementation.</param>
+            <returns>Returns a SaveGameMenu.</returns>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

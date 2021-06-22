@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>GameModel.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Coords\bosscoords.txt" />
+    <None Remove="Coords\coords2.txt" />
+    <None Remove="Coords\enemycoords.txt" />
+    <None Remove="Coords\enemycoordslvl2.txt" />
+    <None Remove="Coords\gascloudcoords.txt" />
+    <None Remove="Coords\gascloudcoordslvl2.txt" />
+    <None Remove="Coords\meteorcoords.txt" />
+    <None Remove="Coords\meteorcoordslvl2.txt" />
+    <None Remove="Coords\meteorcoordslvl3.txt" />
+    <None Remove="Images\enemy2.png" />
+    <None Remove="meteorcoords.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Coords\bosscoords.txt" />
+    <EmbeddedResource Include="Coords\coords2.txt" />
+    <EmbeddedResource Include="Coords\enemycoords.txt" />
+    <EmbeddedResource Include="Coords\enemycoordslvl2.txt" />
+    <EmbeddedResource Include="Coords\gascloudcoords.txt" />
+    <EmbeddedResource Include="Coords\gascloudcoordslvl2.txt" />
+    <EmbeddedResource Include="Coords\meteorcoordslvl2.txt" />
+    <EmbeddedResource Include="Coords\meteorcoordslvl3.txt" />
+    <EmbeddedResource Include="Images\enemy2.png" />
+    <EmbeddedResource Include="Coords\meteorcoords.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

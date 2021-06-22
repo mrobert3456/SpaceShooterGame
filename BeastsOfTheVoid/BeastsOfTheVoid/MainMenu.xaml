@@ -1,0 +1,26 @@
+﻿<Window x:Class="BeastsOfTheVoid.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeastsOfTheVoid"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="1080" Width="1920"
+        ResizeMode="NoResize"
+        WindowState="Maximized">
+    <Grid >
+        <Button Content="New Game" Click="New_Game" Margin="313,0,313,488" Height="44" VerticalAlignment="Bottom">
+        </Button>
+        <Button Content="Load Game" Click="Load_Game" Margin="313,0,313,382" Height="44" VerticalAlignment="Bottom"/>
+        <Button Content="Exit" Click="Exit_Click" Margin="313,981,313,0" Height="44" VerticalAlignment="Top"/>
+        <Label Content="Beasts of The Void" HorizontalContentAlignment="Center" Margin="313,0,313,817" VerticalContentAlignment="Center" FontSize="80" Foreground="Yellow" Height="112" VerticalAlignment="Bottom" />
+        <Grid Visibility="Hidden" x:Name="LoadGrid" Margin="313,701,313,94" >
+            <ListBox x:Name="LoadFilesLB" Margin="0,10,647,0" Height="180" VerticalAlignment="Center" />
+            <Button Content="Load" HorizontalAlignment="Left" Margin="800,100,0,0" VerticalAlignment="Top" Height="69" Width="204" Click="SelectLoad_Click"/>
+        </Grid>
+        <Button Content="Highscore" Click="Button_Click" HorizontalAlignment="Left" Margin="1758,10,0,0" VerticalAlignment="Top" Height="55" Width="152"/>
+        <Grid Visibility="Hidden" x:Name="HighScoreGrid" Margin="1576,70,10,672">
+            <ListBox x:Name="HighScoreBox"></ListBox>
+        </Grid>
+    </Grid>
+</Window>

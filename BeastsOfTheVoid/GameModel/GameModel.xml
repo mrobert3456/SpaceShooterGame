@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameModel</name>
+    </assembly>
+    <members>
+        <member name="T:GameModel.BonusItem">
+            <summary>
+            The perks that the player can pick up.
+            </summary>
+        </member>
+        <member name="M:GameModel.BonusItem.#ctor(System.Double,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.BonusItem"/> class.
+            </summary>
+            <param name="cx">The x axis coordinate where the perk will be.</param>
+            <param name="cy">The y axis coordinate where the perk will be.</param>
+            <param name="bt">The type of the perk.</param>
+        </member>
+        <member name="P:GameModel.BonusItem.BonusType">
+            <summary>
+            Gets or Sets what the perks Type is.
+            </summary>
+        </member>
+        <member name="P:GameModel.BonusItem.Time">
+            <summary>
+            Gets or Sets how long the perk will be active.
+            </summary>
+        </member>
+        <member name="T:GameModel.BulletItem">
+            <summary>
+            The bullets that the ships will shoot.
+            </summary>
+        </member>
+        <member name="M:GameModel.BulletItem.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.BulletItem"/> class.
+            </summary>
+            <param name="cx">The x axis parameter of the bullet.</param>
+            <param name="cy">The y axis parameter of the bullet.</param>
+            <param name="x">Helps calculate where the bullet should travel on the x axis.</param>
+            <param name="y">Helps calculate where the bullet should travel ont the y axis.</param>
+        </member>
+        <member name="P:GameModel.BulletItem.RotDegree">
+            <summary>
+            Gets the rotational degree of the bullet.
+            </summary>
+        </member>
+        <member name="P:GameModel.BulletItem.DX">
+            <summary>
+            Gets the x axis position that the bullet travelled on the map.
+            </summary>
+        </member>
+        <member name="P:GameModel.BulletItem.DY">
+            <summary>
+            Gets the y axis position that the bullet travelled on the map.
+            </summary>
+        </member>
+        <member name="P:GameModel.BulletItem.Rad">
+            <summary>
+            Gets or Sets the rotational degree of the bullet.
+            </summary>
+        </member>
+        <member name="M:GameModel.BulletItem.Move">
+            <summary>
+            Calculates where the bullet should move.
+            </summary>
+        </member>
+        <member name="M:GameModel.BulletItem.BulletGeo(System.Int32,System.Int32)">
+            <summary>
+            Creates the geometry of the bullet.
+            </summary>
+            <param name="xx">The x axis starting point of the bullet.</param>
+            <param name="yy">The y axis starting point of the bullet.</param>
+            <returns>The geometry of the bullet.</returns>
+        </member>
+        <member name="T:GameModel.EnemyShipItem">
+            <summary>
+            The enemy ship game item.
+            </summary>
+        </member>
+        <member name="M:GameModel.EnemyShipItem.#ctor(System.Double,System.Double,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.EnemyShipItem"/> class.
+            </summary>
+            <param name="cx">the x axis parameter.</param>
+            <param name="cy">the y axis parameter.</param>
+            <param name="sizew">The width of the ship.</param>
+            <param name="sizeh">The height of the ship.</param>
+            <param name="health">Space ship's health.</param>
+            <param name="shield">Space ship's shield.</param>
+        </member>
+        <member name="P:GameModel.EnemyShipItem.ImageBrush">
+            <summary>
+            Gets or Sets the image of this object.
+            </summary>
+        </member>
+        <member name="T:GameModel.GameItem">
+            <summary>
+            Simple item that defines the basic definition of an the game elements.
+            </summary>
+        </member>
+        <member name="F:GameModel.GameItem.area">
+            <summary>
+            The area of the game item.
+            </summary>
+        </member>
+        <member name="P:GameModel.GameItem.CX">
+            <summary>
+            Gets or Sets the x axis position of the game item.
+            </summary>
+        </member>
+        <member name="P:GameModel.GameItem.CY">
+            <summary>
+            Gets or Sets the y axis position of the game item.
+            </summary>
+        </member>
+        <member name="P:GameModel.GameItem.RealArea">
+            <summary>
+            Gets the area of the game item.
+            </summary>
+        </member>
+        <member name="M:GameModel.GameItem.IsCollision(GameModel.GameItem)">
+            <summary>
+            Decides whether the item collided with another item.
+            </summary>
+            <param name="other">The other item that this item could've collided with.</param>
+            <returns>Whether they collided or not.</returns>
+        </member>
+        <member name="T:GameModel.GasCloudItem">
+            <summary>
+            The Nebula items. They will bring the player's ship down.
+            </summary>
+        </member>
+        <member name="M:GameModel.GasCloudItem.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.GasCloudItem"/> class.
+            </summary>
+            <param name="cx">the x axis position of the nebula.</param>
+            <param name="cy">The y axis position of the nebula.</param>
+        </member>
+        <member name="T:GameModel.IGameModel">
+            <summary>
+            Specifies the Game model behaviour.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.GameWidth">
+            <summary>
+            Gets the Game width.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.GameHeight">
+            <summary>
+            Gets the Game height.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Level">
+            <summary>
+            Gets or Sets the level.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.BonusTime">
+            <summary>
+            Gets or Sets the remaning time on the map for bonus perk.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Dxb">
+            <summary>
+            Gets or Sets the X coordinate of the mouse's position.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Dyb">
+            <summary>
+             Gets or Sets the Y coordinate of the mouse's position.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Szamlaloshield">
+            <summary>
+             Gets or Sets the time for shield regeneration.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.ShieldCooldown">
+            <summary>
+             Gets or Sets the time for shield cooldown.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.ExpEnemy">
+            <summary>
+            Gets or Sets the enemy which is about to be exploded.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.PlayerShip">
+            <summary>
+             Gets or Sets the player.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Station">
+            <summary>
+             Gets the station.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Bullets">
+            <summary>
+            Gets the bullets list of the player.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Bonus">
+            <summary>
+            Gets or Sets the bonus perk.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.IsBonusPicked">
+            <summary>
+            Gets or Sets a value indicating whether to bonus is picked or not.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.EnemyBullets">
+            <summary>
+            Gets the bullet list of the enemies.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.GasClouds">
+            <summary>
+            Gets the list of gasclouds.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Portal">
+            <summary>
+            Gets the portal.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.DeletableBullets">
+            <summary>
+            Gets a list of bullets which should be deleted.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.Meteors">
+            <summary>
+            Gets the meteors.
+            </summary>
+        </member>
+        <member name="P:GameModel.IGameModel.EnemyShips">
+            <summary>
+            Gets or Sets the enemy ships.
+            </summary>
+        </member>
+        <member name="T:GameModel.MeteorItem">
+            <summary>
+            The meteor items of the game. they will be the obstacles.
+            </summary>
+        </member>
+        <member name="M:GameModel.MeteorItem.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.MeteorItem"/> class.
+            </summary>
+            <param name="cx">The x axis position of the meteor.</param>
+            <param name="cy">The y axis position of the meteor.</param>
+        </member>
+        <member name="T:GameModel.Model">
+            <summary>
+            This will be the Model of the game, there will be the game defining objects, and properties.
+            </summary>
+        </member>
+        <member name="M:GameModel.Model.#ctor(System.Double,System.Double,System.Int32,GameModel.SpaceShipItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.Model"/> class.
+            </summary>
+            <param name="w">The width of the screen.</param>
+            <param name="h">The height of the screen.</param>
+            <param name="lvl">The actual level of the game.</param>
+            <param name="player">The player who plays the game.</param>
+        </member>
+        <member name="P:GameModel.Model.GameWidth">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.BonusTime">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Level">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.GameHeight">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.IsBonusPicked">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.PlayerShip">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Station">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Bullets">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.EnemyBullets">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.GasClouds">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.DeletableBullets">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Meteors">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Bonus">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.EnemyShips">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Portal">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.ExpEnemy">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Dxb">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Dyb">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.Szamlaloshield">
+            <inheritdoc/>
+        </member>
+        <member name="P:GameModel.Model.ShieldCooldown">
+            <inheritdoc/>
+        </member>
+        <member name="T:GameModel.ModelFactory">
+            <summary>
+            Creates model entities.
+            </summary>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateBonusItem(System.Double,System.Double,System.String)">
+            <summary>
+            Creates BonusItem.
+            </summary>
+            <param name="cx">The x axis coordinate where the perk will be.</param>
+            <param name="cy">The y axis coordinate where the perk will be.</param>
+            <param name="bt">The type of the perk.</param>
+            <returns>Returns a BinusItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateBullet(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Crates a Bullet.
+            </summary>
+            <param name="cx">The x axis parameter of the bullet.</param>
+            <param name="cy">The y axis parameter of the bullet.</param>
+            <param name="x">Helps calculate where the bullet should travel on the x axis.</param>
+            <param name="y">Helps calculate where the bullet should travel ont the y axis.</param>
+            <returns>Returns a BulletItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateEnemy(System.Double,System.Double,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates an Enemy.
+            </summary>
+            <param name="cx">the x axis parameter.</param>
+            <param name="cy">the y axis parameter.</param>
+            <param name="sizew">The width of the ship.</param>
+            <param name="sizeh">The height of the ship.</param>
+            <param name="health">Space ship's health.</param>
+            <param name="shield">Space ship's shield.</param>
+            <returns>Returns an EnemyShipItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateGasCloud(System.Double,System.Double)">
+            <summary>
+            Creates a Gas cloud.
+            </summary>
+            <param name="cx">the x axis position of the nebula.</param>
+            <param name="cy">The y axis position of the nebula.</param>
+            <returns>Return a GasCloudItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateMeteor(System.Double,System.Double)">
+            <summary>
+            Creates a meteor.
+            </summary>
+            <param name="cx">The x axis position of the meteor.</param>
+            <param name="cy">The y axis position of the meteor.</param>
+            <returns>Return a MeteorItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreatePortal(System.Double,System.Double)">
+            <summary>
+            Creates a portal.
+            </summary>
+            <param name="cx">The x axis position of the portal.</param>
+            <param name="cy">The y axis position of the portal.</param>
+            <returns>Returns a PortalItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateSpaceShip(System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>
+            Creates the player's spaceship.
+            </summary>
+            <param name="cx">the x axis parameter.</param>
+            <param name="cy">the y axis parameter.</param>
+            <param name="sizew">The width of the ship.</param>
+            <param name="sizeh">The height of the ship.</param>
+            <returns>Returns an SpaceShipItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateStation(System.Double,System.Double)">
+            <summary>
+            Creates a space station.
+            </summary>
+            <param name="cx">The x axis position of the portal.</param>
+            <param name="cy">The y axis position of the portal.</param>
+            <returns>Returns a SpaceStationItem.</returns>
+        </member>
+        <member name="M:GameModel.ModelFactory.CreateModel(System.Double,System.Double,System.Int32,GameModel.SpaceShipItem)">
+            <summary>
+            Creates a model.
+            </summary>
+            <param name="w">The width of the screen.</param>
+            <param name="h">The height of the screen.</param>
+            <param name="lvl">The actual level of the game.</param>
+            <param name="player">The player who plays the game.</param>
+            <returns>Returns a model.</returns>
+        </member>
+        <member name="T:GameModel.PortalItem">
+            <summary>
+            This will be the portal. This will be used for travelling between the two maps.
+            </summary>
+        </member>
+        <member name="M:GameModel.PortalItem.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.PortalItem"/> class.
+            </summary>
+            <param name="cx">The x axis position of the portal.</param>
+            <param name="cy">The y axis position of the portal.</param>
+        </member>
+        <member name="T:GameModel.SpaceShipItem">
+            <summary>
+            The spaceship item of the game.
+            </summary>
+        </member>
+        <member name="F:GameModel.SpaceShipItem.sizeW">
+            <summary>
+            The width of the ship.
+            </summary>
+        </member>
+        <member name="F:GameModel.SpaceShipItem.sizeH">
+            <summary>
+            the height of the ship.
+            </summary>
+        </member>
+        <member name="F:GameModel.SpaceShipItem.rotDegree">
+            <summary>
+            The rotational degree of the ship.
+            </summary>
+        </member>
+        <member name="M:GameModel.SpaceShipItem.#ctor(System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.SpaceShipItem"/> class.
+            </summary>
+            <param name="cx">the x axis parameter.</param>
+            <param name="cy">the y axis parameter.</param>
+            <param name="sizew">The width of the ship.</param>
+            <param name="sizeh">The height of the ship.</param>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Name">
+            <summary>
+            Gets or Sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.DX">
+            <summary>
+            Gets or Sets the x axis position that the player travelled on the map.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.DY">
+            <summary>
+            Gets or Sets the y axis position that the player travelled on the map.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Health">
+            <summary>
+            Gets or Sets the health of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Shield">
+            <summary>
+            Gets or Sets the shield of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Bonus">
+            <summary>
+            Gets or Sets the Bonus perks of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Points">
+            <summary>
+            Gets or Sets the score of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Kills">
+            <summary>
+            Gets or Sets the kills of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Hit">
+            <summary>
+            Gets or Sets the hit damage of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.GetPoints">
+            <summary>
+            Gets or Sets how many points the player earns from a defeated enemy.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.SizeW">
+            <summary>
+            Gets the width of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.SizeH">
+            <summary>
+            Gets the height of the ship.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.PlayerPosX">
+            <summary>
+            Gets the real position of the ship on the x axis.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.PlayerPosY">
+            <summary>
+            Gets the real position of the ship on the y axis.
+            </summary>
+        </member>
+        <member name="P:GameModel.SpaceShipItem.Rad">
+            <summary>
+            Gets or Sets the rotational degree of the ship.
+            </summary>
+        </member>
+        <member name="T:GameModel.SpaceStationItem">
+            <summary>
+            This will be the space station, this will heal up the player.
+            </summary>
+        </member>
+        <member name="M:GameModel.SpaceStationItem.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameModel.SpaceStationItem"/> class.
+            </summary>
+            <param name="cx">The x axis position of the portal.</param>
+            <param name="cy">The y axis position of the portal.</param>
+        </member>
+    </members>
+</doc>

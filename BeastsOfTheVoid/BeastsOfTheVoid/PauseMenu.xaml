@@ -1,0 +1,20 @@
+﻿<Window x:Class="BeastsOfTheVoid.PauseMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeastsOfTheVoid"
+        mc:Ignorable="d"
+        Title="PauseMenu" Height="467" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="529*"/>
+            <ColumnDefinition Width="271*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ResButton" Click="Resume_Game" Content="Resume" HorizontalAlignment="Left" Margin="335,26,0,0" VerticalAlignment="Top" Height="32" Width="130"/>
+        <Button x:Name="SaveButton" Click="Save_Click" Content="Save Game" HorizontalAlignment="Left" Margin="335,93,0,0" VerticalAlignment="Top" Height="32" Width="130"/>
+        <Button Click="Exit_Click" Content="Exit To Menu" HorizontalAlignment="Left" Margin="335,161,0,0" VerticalAlignment="Top" Height="32" Width="130"/>
+        <Label Name="LabelSave" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,199,0,0" VerticalAlignment="Top" Height="235" Width="780" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

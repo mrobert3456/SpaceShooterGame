@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameLogicTests</name>
+    </assembly>
+    <members>
+        <member name="T:GameLogicTests.MainLogicTests">
+            <summary>
+            Contains the MainLogic test methods.
+            </summary>
+        </member>
+        <member name="M:GameLogicTests.MainLogicTests.TestSetDegree">
+            <summary>
+            Tests the SetDegree method.
+            </summary>
+        </member>
+        <member name="M:GameLogicTests.MainLogicTests.TestMove(System.Int32,System.Int32)">
+            <summary>
+            Tests the Move method of the player's ship.
+            </summary>
+            <param name="x">The X axis of the mouse position.</param>
+            <param name="y">The Y axis of the mouse position.</param>
+        </member>
+        <member name="M:GameLogicTests.MainLogicTests.TestNextLevel(System.Int32,System.Int32)">
+            <summary>
+            Test the NextLevel method.
+            </summary>
+            <param name="player">Player's ship coordinate.</param>
+            <param name="portal">Portal object coordinate.</param>
+        </member>
+        <member name="M:GameLogicTests.MainLogicTests.TestCollision(System.Int32,System.Int32)">
+            <summary>
+            Test the collision between the player and a meteor.
+            </summary>
+            <param name="player">Player's ship coordinate.</param>
+            <param name="meteor">A meteor's coordinate.</param>
+        </member>
+        <member name="T:GameLogicTests.ShootLogicTests">
+            <summary>
+            Contains the ShootLogic test methods.
+            </summary>
+        </member>
+        <member name="M:GameLogicTests.ShootLogicTests.TestShootEnemy">
+            <summary>
+            Tests the enemy's shooting.
+            </summary>
+        </member>
+        <member name="M:GameLogicTests.ShootLogicTests.TestShoot">
+            <summary>
+            Tests the player's shoot method.
+            </summary>
+        </member>
+    </members>
+</doc>

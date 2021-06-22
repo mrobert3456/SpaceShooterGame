@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameRepository</name>
+    </assembly>
+    <members>
+        <member name="T:GameRepository.Repository">
+            <summary>
+            This will be the Game's Repository. It will be used for saving, and loading the game.
+            </summary>
+        </member>
+        <member name="M:GameRepository.Repository.SaveGame(System.String,GameModel.IGameModel)">
+            <summary>
+            Saves the game's state into an XML file.
+            </summary>
+            <param name="name">The name of the player.</param>
+            <param name="model">The model which contains the data of the game.</param>
+        </member>
+        <member name="M:GameRepository.Repository.LoadGame(System.String,GameModel.IGameModel)">
+            <summary>
+            Used for loading a game state.
+            </summary>
+            <param name="name">The loadable file's name.</param>
+            <param name="model">The model in which the game should be loaded.</param>
+        </member>
+    </members>
+</doc>
